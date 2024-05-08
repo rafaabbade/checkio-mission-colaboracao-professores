@@ -11,7 +11,7 @@ Each test is a dict with
 TESTS = {
     "Basics": [
          {
-        "input": [
+        "input": [[
             ('Alice', 'Bob'),
             ('Alice', 'Carol'),
             ('Bob', 'Alice'),
@@ -20,7 +20,7 @@ TESTS = {
             ('Carol', 'Eve'),
             ('Dave', 'Bob'),
             ('Eve', 'Carol')
-        ],
+        ]],
         "answer": {
             "Alice": ["Bob", "Carol"],
             "Bob": ["Alice", "Dave"],
@@ -30,12 +30,12 @@ TESTS = {
         }
     },
     {
-        "input": [
+        "input": [[
             ('Alice', 'Bob'),
             ('Carol', 'Frank'),
             ('Bob', 'Carol'),
             ('Frank', 'Carol')
-        ],
+        ]],
         "answer": {
             "Alice": ["Bob"],
             "Carol": ["Frank"],
