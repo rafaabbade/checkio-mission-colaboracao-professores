@@ -10,6 +10,38 @@ Each test is a dict with
 
 TESTS = {
     "Basics": [
-        {{TESTES}}
+         {
+        "input": [
+            ('Alice', 'Bob'),
+            ('Alice', 'Carol'),
+            ('Bob', 'Alice'),
+            ('Bob', 'Dave'),
+            ('Carol', 'Alice'),
+            ('Carol', 'Eve'),
+            ('Dave', 'Bob'),
+            ('Eve', 'Carol')
+        ],
+        "answer": {
+            "Alice": ["Bob", "Carol"],
+            "Bob": ["Alice", "Dave"],
+            "Carol": ["Alice", "Eve"],
+            "Dave": ["Bob"],
+            "Eve": ["Carol"]
+        }
+    },
+    {
+        "input": [
+            ('Alice', 'Bob'),
+            ('Carol', 'Frank'),
+            ('Bob', 'Carol'),
+            ('Frank', 'Carol')
+        ],
+        "answer": {
+            "Alice": ["Bob"],
+            "Carol": ["Frank"],
+            "Bob": ["Carol"],
+            "Frank": ["Carol"]
+        }
+    }
     ]
 }

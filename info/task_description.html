@@ -1,18 +1,18 @@
 <!-- Describe task in general -->
 
 <p>
-    {{ENUNCIADO}}
+    Dada uma lista de pares de colaboração entre professores, crie um dicionário onde cada chave é o nome de um professor e o valor correspondente é uma lista de professores com quem ele colabora. Cada par na lista representa uma colaboração entre dois professores. O objetivo é mapear essas relações de forma clara e organizada.
 </p>
 
 
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Entrada </strong> {{ENTRADA}}
+    <strong>Entrada </strong> Uma lista de pares (tuplas) representando relações de colaboração entre professores.
 </p>
 
 <p>
-    <strong>Saída: </strong> {{SAIDA}}
+    <strong>Saída: </strong> Um dicionário onde cada chave é o nome de um professor e cada valor é uma lista de outros professores com quem ele colabora.
 </p>
 
 
@@ -28,7 +28,22 @@ countConsecutiveSummers(99) == 6
 </pre>
 {% else %}
 <pre class="brush: python">
-    {{EXEMPLOS}}
+    mapear_colaboracoes([
+  ('Alice', 'Bob'),
+  ('Alice', 'Carol'),
+  ('Bob', 'Alice'),
+  ('Bob', 'Dave'),
+  ('Carol', 'Alice'),
+  ('Carol', 'Eve'),
+  ('Dave', 'Bob'),
+  ('Eve', 'Carol')
+]) >> {
+  'Alice': ['Bob', 'Carol'],
+  'Bob': ['Alice', 'Dave'],
+  'Carol': ['Alice', 'Eve'],
+  'Dave': ['Bob'],
+  'Eve': ['Carol']
+}
 </pre>
 {% endif %}
 </div>

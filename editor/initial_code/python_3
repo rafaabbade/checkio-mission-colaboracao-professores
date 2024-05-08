@@ -1,1 +1,54 @@
-{{CODIGO INICIAL}}
+def mapear_colaboracoes(colab):    
+    # Seu código aqui
+    return None
+
+
+
+
+
+print("Example:")
+print(mapear_colaboracoes([
+  ('Alice', 'Bob'),
+  ('Alice', 'Carol'),
+  ('Bob', 'Alice'),
+  ('Bob', 'Dave'),
+  ('Carol', 'Alice'),
+  ('Carol', 'Eve'),
+  ('Dave', 'Bob'),
+  ('Eve', 'Carol')
+]))
+
+assert mapear_colaboracoes([
+  ('Alice', 'Bob'),
+  ('Alice', 'Carol'),
+  ('Bob', 'Alice'),
+  ('Bob', 'Dave'),
+  ('Carol', 'Alice'),
+  ('Carol', 'Eve'),
+  ('Dave', 'Bob'),
+  ('Eve', 'Carol')
+]) == {
+  'Alice': ['Bob', 'Carol'],
+  'Bob': ['Alice', 'Dave'],
+  'Carol': ['Alice', 'Eve'],
+  'Dave': ['Bob'],
+  'Eve': ['Carol']
+}
+
+assert mapear_colaboracoes([
+    ('Alice', 'Bob'),
+    ('Eve', 'Dave'),
+    ('Carol', 'Frank'),
+    ('Dave', 'Eve'),
+    ('Bob', 'Carol'),
+    ('Frank', 'Carol')
+]) == {
+    'Alice': ['Bob'],
+    'Eve': ['Dave'],
+    'Carol': ['Frank'],
+    'Dave': ['Eve'],
+    'Bob': ['Carol'],
+    'Frank': ['Carol']
+}
+
+print("Seu código passou pelos testes, clique em Check para avançar!")
